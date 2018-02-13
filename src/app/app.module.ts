@@ -8,6 +8,10 @@ import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { UtilsProvider } from '../providers/utils/utils';
+import { ImagePicker } from '@ionic-native/image-picker';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { SecureStorage } from '@ionic-native/secure-storage';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,10 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    ImagePicker,
+    Camera,
+    UtilsProvider,
+    SecureStorage,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
